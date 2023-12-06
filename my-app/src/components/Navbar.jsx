@@ -1,16 +1,22 @@
 import React, { useState } from 'react';
-import { AppBar, Box, Button, Grid, Tab, Tabs, Toolbar, Typography } from '@mui/material';
+import { AppBar, Box, Button, Grid, Tab, Tabs, Toolbar, Typography, useMediaQuery, useTheme } from '@mui/material';
 import ShoppingCartCheckout from '@mui/icons-material/ShoppingCartCheckout';
 import DrawerComp from './DrawerComp';
 
 function Navbar({ links }) {
+    const theme = useTheme();
+    console.log(theme);
+    const isMatch = useMediaQuery(theme.breakpoints.down('sm'));
+    console.log(isMatch);
     const [value, setValue] = useState(0);
     return (
         <AppBar sx={{
             backgroundImage: 'linear-gradient(90deg, rgba(180, 58, 58, 1) 2%, rgba(49, 49, 116, 1) 36%, rgba(105, 0, 161, 1) 73%, rgba(166, 69, 252, 1) 100%)'
         }}>
             <Toolbar>
-                <Grid sx={{ placeItems: "center" }} container>
+                {isMatch ? <>
+                    <DrawerComp />
+                </> : <Grid sx={{ placeItems: "center" }} container>
                     <Grid item xs={2}>
                         <Typography>
                             <ShoppingCartCheckout />
@@ -30,8 +36,7 @@ function Navbar({ links }) {
                             <Button sx={{ marginLeft: 1, background: "rgba(180, 58, 58, 1)" }} variant='contained'>SignUp</Button>
                         </Box>
                     </Grid>
-                </Grid>
-                <DrawerComp/>
+                </Grid>}
             </Toolbar>
         </AppBar>
     );

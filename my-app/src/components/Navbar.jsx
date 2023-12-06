@@ -15,6 +15,9 @@ function Navbar({ links }) {
         }}>
             <Toolbar>
                 {isMatch ? <>
+                    <Typography>
+                        <ShoppingCartCheckout />
+                    </Typography>
                     <DrawerComp />
                 </> : <Grid sx={{ placeItems: "center" }} container>
                     <Grid item xs={2}>

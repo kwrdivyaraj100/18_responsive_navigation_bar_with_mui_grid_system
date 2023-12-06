@@ -17,7 +17,7 @@ function DrawerComp() {
             </ListItemButton>
         </List>
         </Drawer>
-        <IconButton>
+        <IconButton sx={{marginLeft: 'auto', color: "white"}} onClick={() => setOpen(!open)} >
             <MenuRoundedIcon/>
         </IconButton>
         </>

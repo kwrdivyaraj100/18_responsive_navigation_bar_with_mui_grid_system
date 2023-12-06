@@ -18,7 +18,7 @@ function Navbar({ links }) {
                     <Typography>
                         <ShoppingCartCheckout />
                     </Typography>
-                    <DrawerComp />
+                    <DrawerComp links={links} />
                 </> : <Grid sx={{ placeItems: "center" }} container>
                     <Grid item xs={2}>
                         <Typography>

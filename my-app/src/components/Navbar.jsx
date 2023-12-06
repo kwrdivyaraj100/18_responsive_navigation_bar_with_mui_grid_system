@@ -6,7 +6,7 @@ import DrawerComp from './DrawerComp';
 function Navbar({ links }) {
     const theme = useTheme();
     console.log(theme);
-    const isMatch = useMediaQuery(theme.breakpoints.down('sm'));
+    const isMatch = useMediaQuery(theme.breakpoints.down('md'));
     console.log(isMatch);
     const [value, setValue] = useState(0);
     return (

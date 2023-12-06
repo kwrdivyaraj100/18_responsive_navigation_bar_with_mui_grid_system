@@ -11,7 +11,7 @@ function DrawerComp({ links }) {
             }} open={open} onClose={() => setOpen(false)}>
                 <List>
                     {links.map((link, index) => (
-                        <ListItemButton key={index} divider>
+                        <ListItemButton onClick={() => setOpen(false)} key={index} divider>
                             <ListItemIcon>
                                 <ListItemText sx={{ color: "white" }}>
                                     {link}

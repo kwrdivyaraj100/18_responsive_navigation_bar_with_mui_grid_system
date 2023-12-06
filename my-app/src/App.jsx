@@ -1,10 +1,13 @@
+import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 
+const linksArray = ["Products", "Services", "Overview", "Contact Us"];
+
 function App() {
   return (
-    <div >
-      <Navbar />
+    <div>
+      <Navbar links={linksArray} />
     </div>
   );
 }

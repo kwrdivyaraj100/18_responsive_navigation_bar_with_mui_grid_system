@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppBar, Grid, Toolbar, Typography } from '@mui/material';
+import { AppBar, Grid, Tab, Tabs, Toolbar, Typography } from '@mui/material';
 import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
 
 function Navbar() {
@@ -13,10 +13,11 @@ function Navbar() {
                         </Typography>
                     </Grid>
                     <Grid item xs={5}>
-                        <Tabs>
-                            
+                        <Tabs indicatorColor="Secondary" textColor='inherit' value={1}>
+                            <Tab label="Products" />
+                            <Tab label="Overview" />
+                            <Tab label="Pricing" />
                         </Tabs>
-
                     </Grid>
                 </Grid>
             </Toolbar>

@@ -1,14 +1,25 @@
 import React, { useState } from 'react';
-import { Drawer } from '@mui/material';
+import { Drawer, IconButton, List, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 
 function DrawerComp() {
     const [open, setOpen] =useState(false);
     return (
         <>
-        <Drawer open={true}>
-
+        <Drawer open={open} onClose={() => setOpen(false)}>
+        <List>
+            <ListItemButton>
+                <ListItemIcon>
+                    <ListItemText>
+                        Products
+                    </ListItemText>
+                </ListItemIcon>
+            </ListItemButton>
+        </List>
         </Drawer>
+        <IconButton>
+            <MenuRoundedIcon/>
+        </IconButton>
         </>
     )
 }

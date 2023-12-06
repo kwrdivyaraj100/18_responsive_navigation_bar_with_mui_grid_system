@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { AppBar, Box, Button, Grid, Tab, Tabs, Toolbar, Typography } from '@mui/material';
 import ShoppingCartCheckout from '@mui/icons-material/ShoppingCartCheckout';
+import DrawerComp from './DrawerComp';
 
 function Navbar({ links }) {
     const [value, setValue] = useState(0);
@@ -30,6 +31,7 @@ function Navbar({ links }) {
                         </Box>
                     </Grid>
                 </Grid>
+                <DrawerComp/>
             </Toolbar>
         </AppBar>
     );

@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Drawer } from '@mui/material';
+import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 
 function DrawerComp() {
+    const [open, setOpen] =useState(false);
     return (
-        <div>DrawerComp</div>
+        <>
+        <Drawer open={true}>
+
+        </Drawer>
+        </>
     )
 }
 
